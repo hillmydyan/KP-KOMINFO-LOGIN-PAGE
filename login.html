@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotspot-kominfo</title>
+  <link rel="stylesheet" href="assets/css/d.css">
+  <link rel="stylesheet" href="assets/css/card.css">
+  <link rel="stylesheet" href="assets/css/remixicon.css" crossorigin="">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+  <!-- <script src="assets/js/swiper-bundle.min.js"></script>   -->
+</head>
+<body>
+  $(if chap-id)
+  <form id="sendinForm" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+  </form>
+  <script type="text/javascript" src="/md5.js"></script>
+  <script type="text/javascript">
+    function doLogin() {
+      var username = document.getElementById('inputUser').value;
+      var password = document.getElementById('inputPassword').value;
+  
+      // Enkripsi password menggunakan MD5
+      var hashedPassword = hexMD5('$(chap-id)' + password + '$(chap-challenge)');
+  
+      // Set nilai username dan password ke form sendinForm
+      document.getElementById('sendinForm').querySelector('input[name="username"]').value = username;
+      document.getElementById('sendinForm').querySelector('input[name="password"]').value = hashedPassword;
+  
+      // Submit form sendinForm
+      document.getElementById('sendinForm').submit();
+  
+      return false; // Prevent default form submission
+    }
+  </script>
+  $(endif)
+
+  <header>
+    <nav>
+      <div class="conts">
+        <div class="logo">
+          <img src="assets/img/Logo_Kementerian_Kominfo.png" alt="Logo">
+          <a href="https://www.lampungselatankab.go.id">
+            <h3>Hotspot<span>Kominfo</span></h3>
+          </a>
+        </div>
+        <div class="hamburger-menu">
+          <div><a href="#sec-04"><span class="bold-white-text">Login</span></a></div>
+        </div>
+      </div>
+    </nav>
+    <h1 class="big-title translate" data-speed="0.1">Kominfo <br>Lampung Selatan</h1>
+
+    <img src="assets/img/pak_nanang.png" class="person translate" data-speed="-0.25" alt="">
+    <img src="assets/img/bg/h1.png" class="mountain1 translate" data-speed="-0.2" alt="">
+    <img src="assets/img/bg/h2.png" class="mountain2 translate" data-speed="0.4" alt="">
+    <img src="assets/img/bg/h3.png" class="mountain3 translate" data-speed="0.3" alt="">
+    <img src="assets/img/bg/langit.png" class="sky translate" data-speed="0.5" alt="">
+  </header>
+
+  
+  <section class="sec-01">
+    <div class="container">
+      <h2 class="main-title">Welcome to Kalianda</h2>
+      <div class="content">
+        <div class="image">
+          <img src="assets/img1.jpeg" alt="">
+        </div>
+
+        <div class="text-box">
+          <h3>Masjid Agung Kalianda</h3>
+          <p>Selamat datang di Masjid Agung Kalianda, simbol kemegahan dan keimanan di jantung Lampung Selatan. 
+            Di sini, arsitektur megah berpadu dengan spiritualitas yang mendalam, menciptakan tempat yang sempurna untuk beribadah dan menemukan ketenangan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="sec-02">
+    <div class="container">
+      <h3 class="section-title">Menara Siger </h3>
+      <div class="content">
+        <div class="image">
+          <img src="assets/img2.jpg" alt="">
+        </div>
+        <div class="info">
+          <h4 class="info-title">Menara Siger</h4>
+          <p>Menara Siger, berdiri gagah di gerbang selatan Sumatra,<br> adalah lambang kejayaan dan keindahan budaya Lampung. 
+            Menara ini merepresentasikan siger, <br>mahkota tradisional yang melambangkan kekuatan dan keagungan. 
+            Sebagai landmark yang menyambut setiap pelancong yang tiba di Pelabuhan Bakauheni, <br>Menara Siger tidak hanya menawarkan pemandangan menakjubkan tetapi juga kebanggaan mendalam terhadap tradisi dan sejarah kita. 
+            Ayo, kita kunjungi Menara Siger dan banggakan warisan budaya kita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-05">
+    <div class="container">
+      <h3 class="section-title">Pelabuhan Bakauheni</h3>
+      <div class="content">
+        <div class="text-box1">
+          <h3>Pelabuhan Bakauheni</h3>
+          <p>Pelabuhan Bakauheni adalah gerbang utama antara Pulau Sumatra dan Pulau Jawa. 
+            Sebagai salah satu pelabuhan tersibuk di Indonesia, Bakauheni menjadi jantung transportasi yang menghubungkan berbagai aktivitas ekonomi, pariwisata, dan budaya.
+        </div>
+        <div class="image">
+          <img src="assets/img4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec-7">
+    <div class="container">
+      <h3 class="section-title"> Bandara Radin Intan </h3>
+      <div class="content">
+        <div class="image">
+          <img src="assets/img/bandara.jpg" alt="">
+        </div>
+
+        <div class="media-info">
+          <h4 class="info-title">Bandara Radin Intan</h4>
+          <p>Bandar Udara Radin Inten II (bahasa Inggris: Radin Inten II Airport), (IATA: TKG, ICAO: WILL), sebelumnya WICT, adalah Bandar Udara yang melayani Kota Bandar Lampung di Provinsi Lampung, Indonesia. Nama bandar udara ini diambil dari nama tokoh yaitu Radin Intan II yang merupakan bagian dari Kesultanan (Kerajaan) Lampung terakhir yang juga salah seorang Pahlawan Nasional asal Lampung. Bandar udara internasional ini berlokasi di Jalan Alamsyah Ratu Perwiranegara di Desa Branti Raya, Kecamatan Natar, Kabupaten Lampung Selatan berada di barat laut Kota Bandar Lampung. Dan pada tahun 2021 bandara ini sudah memiliki 12 parking stand.</p>
+        </div> 
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="sec-03">
+    <div class="container">
+      <h3 class="section-title">Welcome To Hotspot Kominfo</h3>
+      <div class="content">
+        <div class="media-info">
+          <li><a href="https://www.facebook.com/share/i1yMg9dok3g3nxA3/?mibextid=LQQJ4d"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.instagram.com/kemenkominfo?igsh=MW1ieGVqcnhyMmNuOQ=="><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://x.com/kemkominfo"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://youtube.com/@kemkominfotv?si=RC4Yvwpk3Dj8UYIJ"><i class="fab fa-youtube"></i> Youtube</a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+        </div>
+        <div class="image">
+          <img src="assets/img3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-6">
+    <div class="container">
+      <div class="card__container swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <article class="card__article swiper-slide">
+            
+            <div class="card__data">
+              <h3 class="card__name">Lampung Selatan</h3>
+              <p class="card__description">
+                Lampung Selatan menawarkan pesona alam menakjubkan, dari pantai indah hingga gunung yang memukau. Gaskeun boss!
+              </p>
+              <a href="https://www.lampungselatankab.go.id/web/" class="card__button">go to</a>
+            </div>
+          </article>
+  
+          <!-- Slide 2 -->
+          <article class="card__article swiper-slide">
+            
+            <div class="card__data">
+              <h3 class="card__name">PORTAL DATA</h3>
+              <p class="card__description">
+                Ingin tahu data pemerintah? langsung cek aja di portal data!!
+                kami menyediakan teranparansi data sebagai pusat informasi.
+              </p>
+              <a href="https://data.lampungselatankab.go.id/" class="card__button">go to</a>
+            </div>
+          </article>
+  
+          <!-- Slide 3 -->
+          <article class="card__article swiper-slide">
+            
+            <div class="card__data">
+              <h3 class="card__name">PAKe-Oli</h3>
+              <p class="card__description">
+                Ajukan dokumen dan surat di DISDUKCAPIL dengan mudah melalui PAKe-Oli. Praktis dan cepat! Jangan tunggu lagi, segera manfaatkan!
+              </p>
+              <a href="https://pake-oli.lampungselatankab.go.id/main" class="card__button">go to</a>
+            </div>
+          </article>
+
+          <article class="card__article swiper-slide">
+            
+            <div class="card__data">
+              <h3 class="card__name">CSIRT</h3>
+              <p class="card__description">
+                CSIRT Lam-Sel adalah tim keamanan siber yang menangani insiden dan ancaman siber diLampung Selatan.
+              </p>
+              <a href="#" class="card__button">go to</a>
+            </div>
+          </article>
+        </div>
+  
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+        </div>
+  
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section id="sec-04">
+    <div class="box">
+      <form id="loginForm" role="form" action="$(link-login-only)" method="post" onsubmit="return doLogin();">
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+        <h2>Login</h2>
+        <div class="input-box">
+          <input id="inputUser" type="text" name="username" class="form-control" placeholder="Username" required>
+        </div>
+        <div class="input-box">
+          <input id="inputPassword" type="password" name="password" class="form-control" placeholder="Password" required>
+        </div>
+        $(if error)
+        <div class="miss">
+          <p><font color="#20b2d6">Terjadi kesalahan:</font> <font color="#fff">$(error)</font></p>
+        </div>
+        $(endif)
+        <button type="submit" class="btnn">Login</button>
+      </form>
+    </div>
+  </section>
+    
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  
+    // Fokuskan input username saat halaman dimuat
+    document.getElementById('inputUser').focus();
+  </script>
+  
+  <script>
+    //common reveal options to create reveal animations
+    ScrollReveal({
+      //reset: true,
+      distance: '60px',
+      duration: 2500,
+      delay: 400
+    });
+  
+    //target elements, and specify options to create reveal animations
+    ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
+    ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+    ScrollReveal().reveal('.text-box1', { delay: 700, origin: 'left' });
+    ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+    ScrollReveal().reveal('.sec-02 .image, .sec-03 .image, .sec-7 .image', { delay: 500, origin: 'top' });
+    ScrollReveal().reveal('.sec-05 .image', { delay: 500, origin: 'right' });
+    ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+  </script>
+  <!--=============== SWIPER JS ===============-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script>
+    console.log('Initializing Swiper');
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      spaceBetween: 16,
+      loop: true, // Pastikan loop aktif
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false, // Pastikan autoplay tidak berhenti setelah interaksi
+      },
+      observer: true, // Memperbarui Swiper saat DOM diubah
+      observeParents: true,
+    });
+  </script>
+  
+  
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>  
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

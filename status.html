@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Status</title>
+    <link rel="icon" href="assets\img\logokominfo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    $(endif)
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h3 class="logo">Hotspot<span>Kominfo</span></h3>
+                <div class="hamburger-menu">
+                    <div><a href="logout.html?erase-cookie=true"><span class="bold-white-text">Logout</span></a></div>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="big-title translate" data-speed="0.1">Kominfo Lampung Selatan</h1>
+
+        <img src="assets/img/logo-kominfo.png" class="person translate" data-speed="-0.25" alt="">
+        <img src="assets/img/mountain1.png" class="mountain1 translate" data-speed="-0.2" alt="">
+        <img src="assets/img/mountain2.png" class="mountain2 translate" data-speed="0.4" alt="">
+        <img src="assets/img/mountain3.png" class="mountain3 translate" data-speed="0.3" alt="">
+        <img src="assets/img/sky.png" class="sky translate" data-speed="0.5" alt="">
+    </header>
+
+    <section>
+        <div class="shadow"></div>
+        <div class="container">
+            <div class="widget-section widget widget_text wow fadeInUpShort col-md-9 text-center text-sm-inherit mx-auto">
+                <div class="widget-wrap">
+                    <h1 class="widget-title primary-text-light">Hotspot Kominfo</h1>
+                    <div class="textwidget">
+                        <p class="text-lead primary-text-light">Status penggunaan internet $(username) !</p>
+                        <table class="table table-striped mx-auto" style="width: auto;">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Username</strong></td>
+                                    <td>$(username)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>IP Address</strong></td>
+                                    <td>$(ip)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>MAC Address</strong></td>
+                                    <td>$(mac)</td>
+                                </tr>
+                                $(if session-time-left)
+                                <tr>
+                                    <td><strong>Connected / left</strong></td>
+                                    <td>$(uptime) / $(session-time-left)</td>
+                                </tr>
+                                $(else)
+                                <tr>
+                                    <td><strong>Connected</strong></td>
+                                    <td>$(uptime)</td>
+                                </tr>
+                                $(endif)
+                                <tr>
+                                    <td><strong>Download / Upload</strong></td>
+                                    <td>$(bytes-out-nice) / $(bytes-in-nice)</td>
+                                </tr>
+                                $(if limit-bytes-total)
+                                <tr>
+                                    <td><strong>Sisa Kuota</strong></td>
+                                    <td>$(if limit-bytes-total) 
+                                        <script language="javascript">
+                                            result = ($(limit-bytes-total)/1000000).toFixed(2);
+                                            document.write(result);
+                                        </script> MiB
+                                        $(endif)
+                                        $(if limit-bytes-total == '')Unlimited$(endif)
+                                    </td>
+                                </tr>
+                                $(else)
+                                <tr>
+                                    <td><strong>Sisa Kuota</strong></td>
+                                    <td>$(if limit-bytes-out) 
+                                        <script language="javascript">
+                                            result = ($(limit-bytes-out)/1000000).toFixed(2);
+                                            document.write(result);
+                                        </script> MiB
+                                        $(endif)
+                                        $(if limit-bytes-out == '')Unlimited$(endif)
+                                    </td>
+                                </tr>
+                                $(endif)
+                                $(if refresh-timeout)
+                                <tr>
+                                    <td><strong>Status refresh</strong></td>
+                                    <td>$(refresh-timeout)</td>
+                                </tr>
+                                $(endif)
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

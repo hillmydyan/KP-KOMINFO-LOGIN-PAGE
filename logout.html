@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>logout</title>
+    <link rel="icon" href="assets\img\logokominfo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h3 class="logo">Hotspot<span>Kominfo</span></h3>
+                <div class="hamburger-menu">
+                    <div><a href="login.html?erase-cookie=true"><span class="bold-white-text">Login</span></a></div>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="big-title translate" data-speed="0.1">Terima Kasih $ (username)</h1>
+
+        <img src="assets/img/logo-kominfo.png" class="person translate" data-speed="-0.25" alt="">
+        <img src="assets/img/mountain1.png" class="mountain1 translate" data-speed="-0.2" alt="">
+        <img src="assets/img/mountain2.png" class="mountain2 translate" data-speed="0.4" alt="">
+        <img src="assets/img/mountain3.png" class="mountain3 translate" data-speed="0.3" alt="">
+        <img src="assets/img/sky.png" class="sky translate" data-speed="0.5" alt="">
+    </header>
+
+    <section>
+        <div class="shadow"></div>
+        <div class="container">
+            <div class="widget-section widget widget_text col-md-6 text-sm-inherit col-lg-9">
+                <div class="widget-wrap">
+                  <h1 class="widget-title primary-text-light">Hotspot Kominfo Lam-Sel</h1>
+                  <div class="textwidget">
+                    <p class="text-lead primary-text-light">Anda sudah Keluar dari layanan Kominfo Lam-Sel $(username) !</p>
+                    <table class="table">
+                      <tbody class="align-l">
+                        <tr>
+                          <td>Username</td>
+                          <td>$(username)</td>
+                        </tr>
+                        <tr>
+                          <td>IP Address</td>
+                          <td>$(ip)</td>
+                        </tr>
+                        <tr>
+                          <td>MAC Address</td>
+                          <td>$(mac)</td>
+                        </tr>
+                        $(if session-time-left)
+                        <tr>
+                          <td>Connected / left</td>
+                          <td>$(uptime) / $(session-time-left)</td>
+                        </tr>
+                        $(else)
+                        <tr>
+                          <td>Connected</td>
+                          <td>$(uptime)</td>
+                        </tr>
+                        $(endif)
+                        <tr>
+                          <td>Download / Upload</td>
+                          <td>$(bytes-out-nice) / $(bytes-in-nice)</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+  
+    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

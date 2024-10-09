@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #111222;
+}
+
+section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px;
+  color: #fff;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* NAVBAR */
+.conts{
+  display: flex;
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 25px; /* Sesuaikan ukuran logo sesuai keinginan */
+  margin-right: 10px; /* Jarak antara logo dan teks */
+  margin-top:0;
+  
+}
+
+.logo h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.hamburger-menu {
+  width: 1.55rem;
+  height: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+header{
+  width: 100%;
+  height: 500px;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+}
+header:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 25;
+}
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 30;
+  background: linear-gradient(to bottom, rgba( 0, 0, 0, 0.05), transparent)
+}
+nav .conts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.logo span{
+  font-weight: 300;
+}
+
+.hamburger-menu{
+  width: 1.55rem;
+  height: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+.bold-white-text {
+  font-weight: bold;
+  color: white;
+  border: 2px solid transparent; /* Border awal transparan */
+  padding: 8px 16px; /* Padding untuk memberikan ruang di sekitar teks */
+  display: inline-block; /* Menjadikan elemen sebagai blok inline */
+  position: relative; /* Mengatur posisi relatif untuk animasi */
+  overflow: hidden; /* Menghindari efek overflow saat animasi */
+}
+
+.bold-white-text::before {
+  content: ''; /* Membuat pseudo-element untuk efek border */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1; /* Mengatur z-index untuk pseudo-element di belakang teks */
+  transition: all 0.3s ease; /* Animasi efek hover */
+}
+
+.bold-white-text:hover::before {
+  background-color: rgba(255, 255, 255, 0.1); /* Warna border saat hover */
+}
+
+/* Animasi tambahan untuk teks saat hover */
+.bold-white-text:hover {
+  transform: translateY(-2px); /* Efek naik sedikit saat hover */
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+      display: block;
+  }
+}
+/* NAVBAR */
+
+/* header */
+
+.person{
+  position: relative;
+  width: 400px;
+  bottom: 50px;
+  left: 50px;
+  z-index: 20;
+}
+.person{
+  position: relative;
+  width: 350px;
+  bottom: -100px;
+  right: 450px;
+  z-index: 20;
+  filter: drop-shadow(12px 10px 12px black);
+}
+.mountain1{
+  position: absolute;
+  bottom: -105px;
+  width: 930px;
+  right: -30px;
+  z-index: 19;
+}
+
+.mountain2{
+  position: absolute;
+  width: 1300px;
+  bottom: -30px;
+  right: 60px;
+  z-index: 18;
+}
+
+.mountain3{
+  position: absolute;
+  width: 400px;
+  bottom: 90px;
+  right: 5px;
+  z-index: 17;
+}
+
+.sky{
+  position: absolute;
+  width: 1500px;
+  bottom: -100px;
+  right:10px;
+}
+
+/* header */
+
+.main-title{
+  font-size: 4em;
+  margin-bottom: 50px;
+}
+
+.content{
+  position: relative;
+  width: 1150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .image{
+  position: relative;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.content .image img{
+  z-index: 111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content .text-box{
+  z-index: 222;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transform: translate(-150px, 100px);
+}
+
+.content .text-box h3{
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.content .text-box1 {
+  z-index: 222;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transform: translate(40px,40px);
+}
+.content .text-box1 h3{
+  font-size: 3em;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.content .text-box1 p{
+  font-size: 1em;
+  margin-bottom: 10px;
+
+  justify-content: center;
+  text-align: center;
+}
+.media-icons{
+  margin-top: 100px;
+}
+
+.media-icons a{
+  color: #fff;
+  font-size: 2em;
+  margin: 60px;
+}
+
+.section-title{
+  font-size: 3em;
+  margin-bottom: 80px;
+}
+
+.info-title{
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.info{
+  width: 700px;
+  margin-left: 50px;
+}
+
+.media-info{
+  width: 400px;
+  margin-left: 50px;
+}
+
+.media-info li{
+  list-style: none;
+  font-size: 1.4em;
+}
+
+.media-info li {
+  list-style: none;
+  margin-bottom: 15px; /* Tambahkan margin untuk memberikan ruang antar item */
+}
+
+.media-info li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Animasi perubahan warna dan transformasi */
+  display: inline-block;
+  padding: 5px; /* Tambahkan padding untuk memberikan ruang di sekitar teks */
+}
+
+.media-info li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.3s ease; /* Animasi perubahan warna */
+}
+
+.media-info li a:hover {
+  color:red; /* Warna teks saat hover */
+  transform: translateY(-5px); /* Efek naik ke atas saat hover */
+}
+
+
+
+.media-info li:not(:last-child){
+  margin-bottom: 50px;
+}
+
+.media-info li:nth-child(1), .media-info li:nth-child(5){
+  padding-left: 100px;
+}
+
+.media-info li:nth-child(2), .media-info li:nth-child(4){
+  padding-left: 50px;
+}
+
+.sec-03{
+  margin-bottom: 100px;
+}
+
+.box {
+  background: rgba(255,255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.miss {
+  margin-bottom: 15px;
+}
+
+.miss p {
+  margin: 0;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.btnn {
+  width: 100%;
+  padding: 10px;
+  background-color: #20b2d6;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btnn:hover {
+  background-color: #1e90ff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .box {
+    padding: 15px;
+  }
+
+  .btnn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .btnn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}/* sec-00 */
+
+.big-title{
+  position: absolute;
+  z-index: 30;
+  line-height: 6rem;
+  top: calc(50% - 3rem);
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+  bottom: 10;
+  right: -50px;
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+/* popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.popup-header {
+  font-size: 18px;
+  font-weight: bold;
+}
+.popup-content {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.popup-close {
+  margin-top: 10px;
+  text-align: right;
+}
+.popup-close button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+

@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    max-width: 70rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+header:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 25;
+}
+
+.mountain1{
+    position: absolute;
+    bottom: -100px;
+    width: 1500px;
+    right: 0;
+    z-index: 19;
+}
+
+.person{
+    position: absolute;
+    width: 450px;
+    bottom: 70px;
+    left: -10px;
+    z-index: 20;
+}
+
+.mountain2{
+    position: absolute;
+    width: 1100px;
+    bottom: -100px;
+    left: 0;
+    z-index: 18;
+}
+
+.mountain3{
+    position: absolute;
+    width: 900px;
+    bottom: 150px;
+    right: 0;
+    z-index: 17;
+}
+
+.sky{
+    position: absolute;
+    width: 2100px;
+    bottom: 250px;
+    right: 0;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 30;
+    background: linear-gradient(to bottom, rgba( 0, 0, 0, 0.05), transparent)
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.logo span{
+    font-weight: 300;
+}
+
+.hamburger-menu{
+    width: 1.55rem;
+    height: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ 
+}
+.hamburger-menu div {
+    margin-left: 20px; /* Menambahkan jarak antara Logout dan Status */
+}
+.bold-white-text {
+    font-weight: bold;
+    color: white;
+}
+
+.bar{
+    position: relative;
+    width: 1.2rem; 
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.bar:before, .bar:after{
+    content: '';
+    position: absolute;
+    width: 1.55rem;
+    height: 3px;
+    right: 0;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.bar:before{
+    transform: translateY(-8px);
+}
+
+.bar:after{
+    transform: translateY(8px);
+}
+
+.big-title{
+    position: absolute;
+    z-index: 30;
+    line-height: 5rem;
+    top: calc(50% - 2rem);
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    left: 180px;
+}
+
+section{
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+
+}
+
+.kanan {
+    right: 100px;
+}
+
+section .container{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section img{
+    width: 100%;
+}
+
+section .container > *{
+    margin: 2rem;
+}
+
+.content{
+    color: #fff;
+    transform: translateY(-50px);
+}
+
+.imgContainer{
+    transform: translateY(50px);
+}
+
+.title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    position: relative;
+}
+
+.border{
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+}
+
+.shadow{
+    position: absolute;
+    bottom: 100%;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    z-index: 20;
+    background: linear-gradient(to top, #151515, transparent);
+}
+
+.primary-text-light, .table td, .table th {
+    color: white;
+}
+.table {
+    background-color: #444;
+    margin: auto;
+}
+.table-bordered {
+    border: 1px solid #555;
+}
+.widget-title {
+    color: #ffffff;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.table td, .table th {
+    text-align: center;
+}
+
+.opacity{
+    opacity: 0;
+}
+
+/* popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.popup-content {
+    font-size: 35px;
+    line-height: 1.7;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+}
+.popup-content ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+.popup-content ul li {
+    margin-bottom: 5px;
+}
+.popup-close {
+    text-align: center;
+    margin-top: 15px;
+}
+.popup-close button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    justify-content: center;
+}
+.popup-close button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 850px){
+    section .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px){
+    .big-title{
+        font-size: 3rem
+    }
+
+    .text{
+        font-size: .8rem;
+    }
+
+    .title{
+        font-size: 1.2rem;
+    }
+}
